@@ -7,7 +7,8 @@ from scipy.fft import fft2, fftshift
 img = cv2.imread('./testimg/meow_400p.jpg', cv2.IMREAD_GRAYSCALE)
 
 if img is None:
-    raise ValueError("Không thể đọc được ảnh. Hãy kiểm tra lại đường dẫn.")
+    raise ValueError(
+        "Unable to read the image. Please verify if the path is accurate.")
 
 # FFT - Fourier
 dft = fft2(img)
